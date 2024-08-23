@@ -1,16 +1,23 @@
-import { Component } from '@angular/core';
+import {Component, inject} from '@angular/core';
+import {CoursesService} from "./courses.service";
+import {NgFor, CommonModule} from "@angular/common";
+import {Course} from "./courses.model";
 
 @Component({
   selector: 'app-courses',
   standalone: true,
-  imports: [],
-  template: `
-    <p>
-      courses works!
-    </p>
-  `,
+  imports: [NgFor, CommonModule],
+  templateUrl: './courses.component.html',
   styleUrl: './courses.component.scss'
 })
-export class CoursesComponent {
 
+export class CoursesComponent {
+  courses: Course[] = [];
+  coursesService: CoursesService = inject(CoursesService);
+
+  constructor() {
+    this.coursesService.getCourses().then((courses: Course[]) => {
+      this.courses = courses;
+    })
+  }
 }
