@@ -1,4 +1,24 @@
+.navigation_container {
+  @apply mx-auto
+  flex
+  max-w-7xl
+  items-center
+  justify-between
+  p-6
+  lg:px-8
+}
+
 .material-icons.color_blue {
   color: #5285ed;
   transform: scale(2);
+}
+
+.sing_up {
+  @apply bg-blue-500
+  hover:bg-blue-700
+  text-white
+  font-bold
+  py-2
+  px-4
+  rounded-full
 }

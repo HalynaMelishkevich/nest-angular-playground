@@ -1,14 +1,14 @@
-<div class="grid grid-cols-2 gap-4 p-4">
-  <div *ngFor="let course of courses" class="max-w-sm rounded overflow-hidden shadow-lg">
+<div class="courses_grid">
+  <div *ngFor="let course of courses" class="course_container">
     <img class="w-full h-40" src="{{ course.imageUrl }}" alt="Sunset in the mountains">
     <div class="px-6 py-4">
-      <div class="font-bold text-xl mb-2 line-clamp-2">{{ course.title }}</div>
-      <p class="text-gray-700 text-base line-clamp-3">
+      <div class="course_title">{{ course.title }}</div>
+      <p class="course_info">
         {{ course.info }}
       </p>
-      <a href="/courses/{{ course.id }}" class="py-4 mt-3 text-black dark:text-white hover:text-blue-600 inline-flex items-center">Learn More
+      <a href="/courses/{{ course.id }}" class="learn_more">Learn More
         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-             stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+             stroke-width="2" class="learn_more_arrow" viewBox="0 0 24 24">
           <path d="M5 12h14M12 5l7 7-7 7"></path>
         </svg>
       </a>

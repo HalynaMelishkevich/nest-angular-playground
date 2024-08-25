@@ -8,7 +8,7 @@ import {Course} from "./courses.model";
   standalone: true,
   imports: [NgFor, CommonModule],
   templateUrl: './courses.component.html',
-  styleUrl: './courses.component.scss'
+  styleUrl: './courses.component.css'
 })
 
 export class CoursesComponent {

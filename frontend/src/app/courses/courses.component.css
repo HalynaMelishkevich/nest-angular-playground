@@ -1,0 +1,44 @@
+.courses_grid {
+  @apply justify-items-center
+  grid
+  grid-cols-1
+  gap-4
+  p-4
+  sm:grid-cols-2
+}
+
+.course_container {
+  @apply max-w-sm
+  rounded
+  overflow-hidden
+  shadow-lg
+}
+
+.course_title {
+  @apply font-bold
+  text-xl
+  mb-2
+  line-clamp-2
+}
+
+.course_info {
+  @apply text-gray-700
+  text-base
+  line-clamp-3
+}
+
+.learn_more {
+  @apply py-4
+  mt-3
+  text-black
+  dark:text-white
+  hover:text-blue-600
+  inline-flex
+  items-center
+}
+
+.learn_more_arrow {
+  @apply w-4
+  h-4
+  ml-2
+}
