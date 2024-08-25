@@ -133,3 +133,6 @@ dist
 # macOS
 .idea/
 
+# env vars
+backend/.env
+
