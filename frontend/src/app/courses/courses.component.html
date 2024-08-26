@@ -6,12 +6,20 @@
       <p class="course_info">
         {{ course.info }}
       </p>
-      <a href="/courses/{{ course.id }}" class="learn_more">Learn More
+      <button class="learn_more" (click)="onLearnMoreClick(course)" data-twe-toggle="modal" data-twe-target="#exampleModal">
+        Learn More
         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
              stroke-width="2" class="learn_more_arrow" viewBox="0 0 24 24">
           <path d="M5 12h14M12 5l7 7-7 7"></path>
         </svg>
-      </a>
+      </button>
     </div>
   </div>
+
+  <app-course
+    *ngIf="selectedCourse"
+    [course]="selectedCourse"
+    (close)="onCourseDetailsClose()"
+    (showToast)="onToastShown()"
+  ></app-course>
 </div>

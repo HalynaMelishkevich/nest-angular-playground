@@ -1,5 +1,16 @@
 <main>
   <header></header>
-  <app-navigation></app-navigation>
-  <app-courses></app-courses>
+  <div class="absolute top-0 left-1/2 transform -translate-x-1/2 z-50 p-4">
+    <app-under-construction-toast
+      *ngIf="showUnderConstructionToast"
+      (close)="onToastHidden()"
+    ></app-under-construction-toast>
+  </div>
+  <app-navigation
+    (showToast)="onToastShown()"
+  ></app-navigation>
+  <app-courses
+    (showToast)="onToastShown()"
+    (hideToast)="onToastHidden()"
+  ></app-courses>
 </main>

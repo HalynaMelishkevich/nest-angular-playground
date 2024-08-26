@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
@@ -9,5 +9,9 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrl: './navigation.component.css'
 })
 export class NavigationComponent {
+  @Output() showToast = new EventEmitter<boolean>();
 
+  onToastShown() {
+    this.showToast.emit(true);
+  }
 }
